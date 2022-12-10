@@ -28,13 +28,13 @@ const MainNavigation = () => {
             <a href="/">Home</a>
           </li>
           <li className="px-5 py-1 rounded-md  text-[rgb(135,206,250)] font-bold text-xl hover:scale-110 hover:duration-500">
-            <a href="/">Payment</a>
+            <a href="https://smarthubeducation.hdfcbank.com/SmartFees/Landing.action?instId=4816">Payment</a>
           </li>
           <li className="px-5 py-1 rounded-md  text-[rgb(135,206,250)] font-bold text-xl hover:scale-110 hover:duration-500">
-            <a href="/">Contact Us</a>
+            <a href="https://newhorizoncollegeofengineering.in/contact-new/">Contact Us</a>
           </li>
           <li className="px-5 py-1 rounded-md  text-[rgb(135,206,250)] font-bold text-xl hover:scale-110 hover:duration-500">
-            <a href="/">About</a>
+            <a href="https://newhorizoncollegeofengineering.in/about/">About</a>
           </li>
 
           {!isLoggedIn && (
