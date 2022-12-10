@@ -7,14 +7,9 @@ function Attendance() {
 
       <main className=" p-10 pt-20 ">
         <div className="flex items-center justify-center">
-          <h1 className=" text-center font-extrabold text-2xl ml-auto">
+          <h1 className=" text-center font-extrabold text-2xl m-auto ">
             CE - SEM-III (I SECTION)
           </h1>
-          <button className="ml-auto mr-5 bg-indigo-700 p-3 rounded-2xl">
-            <a href="add.php" className="">
-              UPDATE
-            </a>
-          </button>
         </div>
         <div className="flex justify-center">
           <table
@@ -52,7 +47,6 @@ function Attendance() {
           </table>
         </div>
       </main>
-      <script src="../script.js"></script>
     </body>
   );
 }
