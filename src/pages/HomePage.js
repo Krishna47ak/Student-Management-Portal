@@ -1,7 +1,13 @@
-import StartingPageContent from '../components/StartingPage/StartingPageContent';
+import StartingPageContent from "../components/StartingPage/StartingPageContent";
 
 const HomePage = () => {
-  return <StartingPageContent />;
+  setTimeout(myURL, 2000);
+  function myURL() {
+    document.location.href = "/home";
+  }
+  return (
+      <StartingPageContent />
+  );
 };
 
 export default HomePage;

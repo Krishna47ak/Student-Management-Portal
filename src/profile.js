@@ -9,7 +9,7 @@ import Attendence from "./pages/Attendence"
 import HomePage from "./pages/HomePage";
 import AuthContext from "./store/auth-context";
 import { Diagram } from "./components/Diagram";
-// import AttendenceTable from "./components/attendanceTable";
+import LoadingSpinner from "./components/LoadingSpinner";
 
 function App() {
   const authCtx = useContext(AuthContext);
@@ -18,11 +18,14 @@ function App() {
   return (
     <Layout>
       <Switch>
-        <Route path="/" exact>
+        <Route path="/home" exact>
           <Home />
         </Route>
-        <Route path="/start" exact>
+        <Route path="/" exact>
           <HomePage />
+        </Route>
+        <Route path="/spinner" exact>
+          <LoadingSpinner />
         </Route>
         <Route path="/attendence" exact>
           <Attendence />

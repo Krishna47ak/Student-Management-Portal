@@ -1,15 +1,28 @@
 .starting {
-  margin: 3rem auto;
+  margin-top: 13%;
   text-align: center;
 }
 
 .starting h1 {
   font-size: 5rem;
 }
+h6 {
+  animation: growth 3s;
+  animation-fill-mode: backwards;
+  font-size: 4rem;
+}
+@keyframes growth {
+  0% {
+    font-size: 4rem;
+  }
+  100% {
+    font-size: 6rem;
+  }
+}
 body {
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 400%;
-    animation: gradient 30s ease infinite;}
+    background-size: 1000% 1000%;
+    animation: gradient 20s ease infinite;}
 
 @keyframes gradient {
     0% {
