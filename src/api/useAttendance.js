@@ -3,7 +3,7 @@ import axios from 'axios';
 
 export default () => {
     const [attendence, setAttendence] = useState([])
-    async function useResults() {
+    async function useAttendance() {
         try {
             const response = await axios.get("https://run.mocky.io/v3/9de62c67-95f8-49c6-bbf4-9cd9d6e6eba0")
             setAttendence(response.data)
@@ -12,7 +12,7 @@ export default () => {
         }
     }
     useEffect(() => {
-        useResults()
+        useAttendance()
     },[])
     return [attendence]
 }
