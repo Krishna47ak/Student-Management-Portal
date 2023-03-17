@@ -8,7 +8,7 @@ import AuthPage from "./pages/AuthPage";
 import Attendence from "./pages/Attendence"
 import HomePage from "./pages/HomePage";
 import AuthContext from "./store/auth-context";
-import { Diagram } from "./components/Diagram";
+import Chart from "./components/Chart";
 import LoadingSpinner from "./components/LoadingSpinner";
 
 function App() {
@@ -31,7 +31,7 @@ function App() {
           <Attendence />
         </Route>
         <Route path="/chart" exact>
-          <Diagram />
+          <Chart />
         </Route>
         {!authCtx.isLoggedIn && (
           <Route path="/auth">

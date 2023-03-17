@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import Card from "../components/Card/Card";
 import Footer from "../components/Footer";
 import { Link, useHistory, Route } from "react-router-dom";
@@ -14,7 +15,7 @@ export default function Home() {
     document.location.href = "/attendence";
   }
   return (
-    <body>
+    <Fragment>
       <script crossOrigin src="https://cdn.tailwindcss.com"></script>
       <main className="p-10 pt-20 space-y-10">
         <div className="relative flex space-x-16 justify-center">
@@ -37,6 +38,6 @@ Here students can also the view the achievements of other students of their clas
         </div>
       </main>
       <Footer />
-    </body>
+    </Fragment>
   );
 }
