@@ -7,15 +7,15 @@ import { Radar } from "react-chartjs-2";
 ChartJS.register(RadialLinearScale, PointElement, LineElement, Filler, Tooltip, Legend);
 
 export default function Chart() {
-  const [cie, setCie] = useState([1, 1, 1])
-  const [assignment, setAssignment] = useState([1, 1, 1])
-  const [quiz, setQuiz] = useState([1, 1, 1])
+  const [cie, setCie] = useState([])
+  const [assignment, setAssignment] = useState([])
+  const [quiz, setQuiz] = useState([])
   const [graph] = useGraph()
 
   if (!graph) {
     return <img src={spinner} style={{ width: '100px', margin: 'auto', display: 'block' }} alt='Loading...' />
   }
-  
+
   function marks(id) {
     const subject = graph.find((subject) => subject.id == id)
     console.log(subject.cie);
@@ -71,16 +71,16 @@ export default function Chart() {
         <div className=" h-6 text-center font-quicksand font-bold">
           <h2 className="text-2xl">SUBJECTS</h2>
           <ul className="p-5 flex-auto font-quicksand block space-y-10 mt-10">
-            <button onClick={marks.bind(this, 1)} className="bg-transparent hover:bg-gradient-to-l from-cyan-500 to-blue-500 text-blue-700 font-semibold hover:text-white py-2 border border-blue-500 hover:border-transparent w-[14rem]">
+            <button onClick={marks.bind(this, 1)} className="bg-transparent focus:bg-gradient-to-l from-cyan-500 to-blue-500 text-blue-700 font-semibold focus:text-white py-2 border border-blue-500 hover:scale-105 duration-200 w-[14rem] ">
               Math
             </button>
-            <button onClick={marks.bind(this, 2)} className="bg-transparent hover:bg-gradient-to-l from-cyan-500 to-blue-500 text-blue-700 font-semibold hover:text-white py-2 border border-blue-500 hover:border-transparent w-[14rem]">
+            <button onClick={marks.bind(this, 2)} className="bg-transparent focus:bg-gradient-to-l from-cyan-500 to-blue-500 text-blue-700 font-semibold focus:text-white py-2 border border-blue-500 hover:scale-105 duration-200 w-[14rem] ">
               C Programming
             </button>
-            <button onClick={marks.bind(this, 3)} className="bg-transparent hover:bg-gradient-to-l from-cyan-500 to-blue-500 text-blue-700 font-semibold hover:text-white py-2 border border-blue-500 hover:border-transparent w-[14rem]">
+            <button onClick={marks.bind(this, 3)} className="bg-transparent focus:bg-gradient-to-l from-cyan-500 to-blue-500 text-blue-700 font-semibold focus:text-white py-2 border border-blue-500 hover:scale-105 duration-200 w-[14rem] ">
               Java
             </button>{" "}
-            <button onClick={marks.bind(this, 4)} className="bg-transparent hover:bg-gradient-to-l from-cyan-500 to-blue-500 text-blue-700 font-semibold hover:text-white py-2 border border-blue-500 hover:border-transparent w-[14rem]">
+            <button onClick={marks.bind(this, 4)} className="bg-transparent focus:bg-gradient-to-l from-cyan-500 to-blue-500 text-blue-700 font-semibold focus:text-white py-2 border border-blue-500 hover:scale-105 duration-200 w-[14rem] ">
               English
             </button>
           </ul>
@@ -108,6 +108,7 @@ export default function Chart() {
               <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
                 <div
                   className="bg-[#9725f2] h-2.5 rounded-full"
+                  style={{width: `${((cie.length / 3) * 100).toFixed(2)}%`}}
                 ></div>
               </div>
 
@@ -123,7 +124,8 @@ export default function Chart() {
                 <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
                   <div
                     className="bg-[#2babf2] h-2.5 rounded-full"
-                  ></div>
+                    style={{width: `${((assignment.length / 3) * 100).toFixed(2)}%`}}
+                    ></div>
                 </div>
 
                 <div className="">
@@ -138,8 +140,8 @@ export default function Chart() {
                   <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
                     <div
                       className="bg-[#00d75e] h-2.5 rounded-full"
-                    // style="width: 20%"
-                    ></div>
+                      style={{width: `${((quiz.length / 3) * 100).toFixed(2)}%`}}
+                      ></div>
                   </div>
                 </div>
               </div>
